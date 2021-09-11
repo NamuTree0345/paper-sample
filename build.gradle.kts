@@ -25,6 +25,7 @@ dependencies {
     testImplementation("org.mockito:mockito-core:3.6.28")
 }
 
+project.extra.set("packageName", name.replace("-", ""))
 project.extra.set("pluginName", name.split('-').joinToString("") { it.capitalize() })
 
 tasks {
@@ -40,6 +41,20 @@ tasks {
     }
 
     create<Jar>("paperJar") {
+        from(sourceSets["main"].output)
+        archiveBaseName.set(project.extra.properties["pluginName"].toString())
+        archiveVersion.set("") // For bukkit plugin update
+
+        doLast {
+            copy {
+                from(archiveFile)
+                val plugins = File(rootDir, ".debug/plugins/")
+                into(if (File(plugins, archiveFileName.get()).exists()) File(plugins, "update") else plugins)
+            }
+        }
+    }
+
+    shadowJar {
         from(sourceSets["main"].output)
         archiveBaseName.set(project.extra.properties["pluginName"].toString())
         archiveVersion.set("") // For bukkit plugin update
