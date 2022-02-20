@@ -35,7 +35,7 @@ tasks {
 
     create<Jar>("paperJar") {
         from(sourceSets["main"].output)
-        archiveBaseName.set(project.extra.properties["pluginName"].toString())
+        archiveBaseName.set(project.name)
         archiveVersion.set("") // For bukkit plugin update
 
         doLast {
@@ -49,7 +49,7 @@ tasks {
 
     shadowJar {
         from(sourceSets["main"].output)
-        archiveBaseName.set(project.extra.properties["pluginName"].toString())
+        archiveBaseName.set(project.name)
         archiveVersion.set("") // For bukkit plugin update
 
         doLast {
