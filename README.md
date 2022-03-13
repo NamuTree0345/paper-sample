@@ -12,4 +12,4 @@
 * #### `io.github.monun:kommand` [![Maven Central](https://img.shields.io/maven-central/v/io.github.monun/kommand)](https://search.maven.org/artifact/io.github.monun/kommand/)
 * #### `org.jetbrains.exposed:exposed-core` [![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.exposed/exposed-core)](https://search.maven.org/artifact/org.jetbrains.exposed/exposed-core/)
 * #### `org.jetbrains.kotlinx:kotlinx-coroutines-core` [![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.kotlinx/kotlinx-coroutines-core)](https://search.maven.org/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core/)
-* #### `io.github.monun:heartbeat-coroutines` [![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.kotlinx/kotlinx-coroutines-core)](https://search.maven.org/artifact/io.github.monun/heartbeat-coroutines/)
+* #### `io.github.monun:heartbeat-coroutines` [![Maven Central](https://img.shields.io/maven-central/v/io.github.monun/heartbeat-coroutines)](https://search.maven.org/artifact/io.github.monun/heartbeat-coroutines/)
